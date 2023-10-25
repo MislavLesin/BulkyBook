@@ -3,8 +3,9 @@ using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyBookWeb.Controllers
+namespace BulkyBookWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -35,7 +36,7 @@ namespace BulkyBookWeb.Controllers
                 TempData["success"] = "Successfuly added Category";
                 return RedirectToAction("Index");
             }
-           return View(obj);
+            return View(obj);
         }
         //GET
         public IActionResult Edit(int? Id)
@@ -44,7 +45,7 @@ namespace BulkyBookWeb.Controllers
             {
                 return NotFound();
             }
-            var categoryFromDb = _unitOfWork.Category.GetFirstOrDefault(u => u.Id==Id);
+            var categoryFromDb = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == Id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -72,7 +73,7 @@ namespace BulkyBookWeb.Controllers
             {
                 return NotFound();
             }
-            var categoryFromDb = _unitOfWork.Category.GetFirstOrDefault(u=>u.Id == Id);
+            var categoryFromDb = _unitOfWork.Category.GetFirstOrDefault(u => u.Id == Id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -80,7 +81,7 @@ namespace BulkyBookWeb.Controllers
             return View(categoryFromDb);
         }
         //POST
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeletePOST(int? Id)
         {
