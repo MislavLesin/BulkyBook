@@ -12,6 +12,7 @@ namespace BulkyBook.DataAccess.Repository
     public class Repository<T> : IRepository<T> where T : class
     {
         private readonly ApplicationDbContext _db;
+
         internal DbSet<T> dbSet;
         public Repository(ApplicationDbContext db)
         {

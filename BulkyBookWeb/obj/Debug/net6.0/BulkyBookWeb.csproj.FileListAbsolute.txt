@@ -251,3 +251,15 @@ C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Bulky
 C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Models.dll
 C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.DataAccess.pdb
 C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\BulkyBook.Models.pdb
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\obj\Debug\net6.0\BulkyBookWeb.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\MislavLešin\source\repos\BulkyBook\BulkyBookWeb\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
