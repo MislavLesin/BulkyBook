@@ -17,16 +17,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\165ae154-fb4b-47ce-8403-9ed932704d52.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\165ae154-fb4b-47ce-8403-9ed932704d52.jpg"
-    },
-    {
       "Id": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\769bcc49-e8e8-4f7f-9956-24372ea4621e.PNG",
       "PackagePath": "staticwebassets\\images\\products\\769bcc49-e8e8-4f7f-9956-24372ea4621e.PNG"
     },
     {
-      "Id": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\cd992b00-db5d-4f67-8a29-e21696adf5e8.jfif",
-      "PackagePath": "staticwebassets\\images\\products\\cd992b00-db5d-4f67-8a29-e21696adf5e8.jfif"
+      "Id": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\77409bad-56ee-46f5-8774-77a8f070da60.png",
+      "PackagePath": "staticwebassets\\images\\products\\77409bad-56ee-46f5-8774-77a8f070da60.png"
+    },
+    {
+      "Id": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\images\\products\\ca2c55c3-8394-4fdc-a64b-afd2611b6c89.jfif",
+      "PackagePath": "staticwebassets\\images\\products\\ca2c55c3-8394-4fdc-a64b-afd2611b6c89.jfif"
     },
     {
       "Id": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBookWeb\\wwwroot\\js\\product.js",
