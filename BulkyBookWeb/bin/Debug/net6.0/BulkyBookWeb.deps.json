@@ -9,6 +9,7 @@
       "BulkyBookWeb/1.0.0": {
         "dependencies": {
           "BulkyBook.DataAccess": "1.0.0",
+          "BulkyBook.Utility": "1.0.0",
           "Microsoft.AspNet.Mvc": "5.3.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.23",
           "Microsoft.AspNetCore.Identity.UI": "6.0.23",
@@ -3048,10 +3049,19 @@
         "dependencies": {
           "Microsoft.AspNet.Mvc": "5.3.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.23"
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.23",
+          "Microsoft.Extensions.Identity.Stores": "6.0.23"
         },
         "runtime": {
           "BulkyBook.Models.dll": {}
+        }
+      },
+      "BulkyBook.Utility/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.23"
+        },
+        "runtime": {
+          "BulkyBook.Utility.dll": {}
         }
       }
     }
@@ -4951,6 +4961,11 @@
       "sha512": ""
     },
     "BulkyBook.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BulkyBook.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
