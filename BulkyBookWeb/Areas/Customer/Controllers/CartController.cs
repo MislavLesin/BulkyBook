@@ -77,8 +77,7 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 			ShoppingCartVM.ListCart = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value,
 				includeProperties: "Product");
 
-			ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
-			ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
+			
 			ShoppingCartVM.OrderHeader.OrderDate = DateTime.Now;
 			ShoppingCartVM.OrderHeader.ApplicationUserId = claim.Value;
 			
@@ -89,6 +88,18 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 			}
 			_unitOfWork.OrderHeader.Add(ShoppingCartVM.OrderHeader);
 			_unitOfWork.Save();
+
+			ApplicationUser applicationUser = _unitOfWork.ApplicationUser.GetFirstOrDefault(u => u.Id == claim.Value);
+			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
+			{
+				ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusPending;
+				ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusPending;
+			}
+			else
+			{
+				ShoppingCartVM.OrderHeader.PaymentStatus = SD.PaymentStatusDelayedPayment;
+				ShoppingCartVM.OrderHeader.OrderStatus = SD.StatusApproved;
+			}
 
 			foreach (var cart in ShoppingCartVM.ListCart)
 			{
@@ -105,8 +116,19 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 			_unitOfWork.ShoppingCart.RemoveRange(ShoppingCartVM.ListCart);
 			_unitOfWork.Save();
 
+			if (applicationUser.CompanyId.GetValueOrDefault() == 0)
+			{
+				return new StatusCodeResult(303);
+			}
+			else
+			{
+				return RedirectToAction("OrderConfirmation", "Cart", new { id = ShoppingCartVM.OrderHeader.Id });
+			}
+		}
 
-			return RedirectToAction(nameof(Index));
+		public IActionResult OrderConfirmation(int id)
+		{
+			return View(id);
 		}
 		private double GetPriceBasedOnQuantity(double quantity,double price, double price50, double price100)
         {

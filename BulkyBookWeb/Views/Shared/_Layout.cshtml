@@ -39,6 +39,11 @@
                                 <i class="bi bi-cart"></i>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">
+                              Manage Order
+                            </a>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial"/>
                     @* <form class="d-flex">
@@ -67,6 +72,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false)  
 </body>
 </html>
