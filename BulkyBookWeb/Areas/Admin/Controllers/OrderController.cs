@@ -32,8 +32,23 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             };
             return View(OrderVM);
         }
+        [ActionName("Details")]
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public IActionResult Details_PAY_NOW()
+        {
+            OrderVM.OrderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == OrderVM.OrderHeader.Id, includeProperties: "ApplicationUser");
+            OrderVM.OrderDetails = _unitOfWork.OrderDetails.GetAll(u => u.OrderId == OrderVM.OrderHeader.Id, includeProperties: "Product");
+         
+            return RedirectToAction("PaymentConfirmation",OrderVM.OrderHeader.Id);
+        }
+        
+        public IActionResult PaymentConfirmation(int orderHeaderId)
+        {
+            OrderHeader orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == orderHeaderId);
+            _unitOfWork.OrderHeader.UpdateStatus(orderHeaderId, orderHeader.OrderStatus, SD.StatusApproved);
+            return View(orderHeader);
+        }
         public IActionResult UpdateOrderDetail()
         {
             var orderHeaderFromDb = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == OrderVM.OrderHeader.Id, tracked:false);
@@ -58,6 +73,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             return RedirectToAction("Details", "Order", new { orderId = orderHeaderFromDb.Id });
         }
         [HttpPost]
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
         [ValidateAntiForgeryToken]
         public IActionResult StartProcessing()
         {
@@ -68,6 +84,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             return RedirectToAction("Details", "Order", new { orderId = OrderVM.OrderHeader.Id });
         }
         [HttpPost]
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
         [ValidateAntiForgeryToken]
         public IActionResult ShipOrder()
         {
@@ -76,10 +93,25 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             orderHeader.Carrier = OrderVM.OrderHeader.Carrier;
             orderHeader.OrderStatus = OrderVM.OrderHeader.OrderStatus;
             orderHeader.ShippingDate = DateTime.Now;
+            if(orderHeader.PaymentStatus==SD.PaymentStatusDelayedPayment)
+            {
+                orderHeader.PaymentDueDate = DateTime.Now.AddDays(30);
+            }
             _unitOfWork.OrderHeader.Update(orderHeader);
             _unitOfWork.Save();
             TempData["Success"] = "Order Shipped Successfully";
 
+            return RedirectToAction("Details", "Order", new { orderId = OrderVM.OrderHeader.Id });
+        }
+        [HttpPost]
+        [Authorize(Roles = SD.Role_Admin + "," + SD.Role_Employee)]
+        [ValidateAntiForgeryToken]
+        public IActionResult CancelOrder()
+        {
+            var orderHeader = _unitOfWork.OrderHeader.GetFirstOrDefault(u => u.Id == OrderVM.OrderHeader.Id, tracked: false);
+            _unitOfWork.OrderHeader.UpdateStatus(orderHeader.Id, SD.StatusCancelled, SD.StatusRefunded);
+            _unitOfWork.Save();
+            TempData["Success"] = "Order Canceled Successfully";
             return RedirectToAction("Details", "Order", new { orderId = OrderVM.OrderHeader.Id });
         }
         #region API_CALLS
