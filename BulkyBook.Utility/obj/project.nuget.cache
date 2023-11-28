@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SN8I5GHVH/eBsgJTxX4+wxmruJGUsYNxPXAq4II10e8SLvPwuGvh1v7rHp5g8TLGe8PIwWtbGOb+4HTGKfh83A==",
+  "dgSpecHash": "FB+oICQYnxOHn8zeaeBAkHiw6J2pekHuNVnXkpF732K4xN+ChirsjIY0QEQxh7Q4h8OtV3lilYliPZhJlr934w==",
   "success": true,
   "projectFilePath": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MislavLešin\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
+    "C:\\Users\\MislavLešin\\.nuget\\packages\\mailkit\\4.3.0\\mailkit.4.3.0.nupkg.sha512",
     "C:\\Users\\MislavLešin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.23\\microsoft.aspnetcore.cryptography.internal.6.0.23.nupkg.sha512",
     "C:\\Users\\MislavLešin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.23\\microsoft.aspnetcore.cryptography.keyderivation.6.0.23.nupkg.sha512",
     "C:\\Users\\MislavLešin\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.23\\microsoft.aspnetcore.identity.ui.6.0.23.nupkg.sha512",
@@ -18,8 +20,12 @@
     "C:\\Users\\MislavLešin\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\MislavLešin\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\MislavLešin\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\MislavLešin\\.nuget\\packages\\mimekit\\4.3.0\\mimekit.4.3.0.nupkg.sha512",
     "C:\\Users\\MislavLešin\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\MislavLešin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\MislavLešin\\.nuget\\packages\\system.formats.asn1\\7.0.0\\system.formats.asn1.7.0.0.nupkg.sha512",
+    "C:\\Users\\MislavLešin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\MislavLešin\\.nuget\\packages\\system.security.cryptography.pkcs\\7.0.3\\system.security.cryptography.pkcs.7.0.3.nupkg.sha512",
+    "C:\\Users\\MislavLešin\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
