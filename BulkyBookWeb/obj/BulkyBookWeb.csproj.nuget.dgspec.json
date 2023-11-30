@@ -35,6 +35,9 @@
             "projectReferences": {
               "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj": {
                 "projectPath": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBook.Models\\BulkyBook.Models.csproj"
+              },
+              "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj": {
+                "projectPath": "C:\\Users\\MislavLešin\\source\\repos\\BulkyBook\\BulkyBook.Utility\\BulkyBook.Utility.csproj"
               }
             }
           }
